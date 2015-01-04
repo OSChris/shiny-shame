@@ -1,0 +1,4 @@
+.DS_STORE
+/scripts/angular.min.js
+/scripts/react.min.js
+/node_modules/

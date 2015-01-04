@@ -1,0 +1,15 @@
+{
+  "name": "angular-react",
+  "version": "1.0.0",
+  "description": "React Angular mashup using D3 to render some graphs",
+  "main": "app.js",
+  "dependencies": {
+    "bower": "^1.3.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

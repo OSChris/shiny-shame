@@ -1,0 +1,19 @@
+{
+  "name": "angular-react",
+  "version": "0.0.0",
+  "authors": [
+    "Chris Yammine <chris@wishpond.com>"
+  ],
+  "description": "React and Angular mashup using d3 to render some graphs",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "www.github.com/OSChris",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
