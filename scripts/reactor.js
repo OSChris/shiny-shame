@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 
 var ListComponent =
-  React.createClass({
+  React.createClass({displayName: "ListComponent",
     componentDidMount:function(){
       this.renderChart(this.props.data)
     },
@@ -35,23 +35,23 @@ var ListComponent =
     },
     render:function(){
       return (
-        <div className="box">
-          <h4>Chart #{this.props.target+1}</h4>
-          <div id={"chart-" + this.props.target}></div>
-        </div>
+        React.createElement("div", {className: "box"}, 
+          React.createElement("h4", null, "Chart #", this.props.target+1), 
+          React.createElement("div", {id: "chart-" + this.props.target})
+        )
       )
     }
   });
 
 var ReactList =
-  React.createClass({
+  React.createClass({displayName: "ReactList",
     render:function(){
       return (
-        <div>
-          {this.props.data.map(function (item, index){
-            return <ListComponent data={item} target={index} />
-          })}
-        </div>
+        React.createElement("div", null, 
+          this.props.data.map(function (item, index){
+            return React.createElement(ListComponent, {data: item, target: index})
+          })
+        )
       )
     }
   });

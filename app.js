@@ -2,7 +2,7 @@ angular.module("ReactCharts", [])
 
 .controller("MainCtrl", function ($scope) {
   $scope.items = [];
-  $scope.amount = 500;
+  $scope.amount = 50;
 
   $scope.createItems = function () {
     $scope.items = [];
@@ -11,14 +11,14 @@ angular.module("ReactCharts", [])
         for (var k = 0; k < 8; k++) {
           dataPoints.push(Math.floor(Math.random()*10))
         }
-      $scope.items.push({
-        dataPoints
-      })
+      $scope.items.push(dataPoints)
     }
   }
+  $scope.createItems()
 })
 .directive("reacting", function () {
   return {
+    controller: 'MainCtrl',
     restrict: 'E',
     scope: {
       values:'='
